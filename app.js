@@ -10,6 +10,7 @@ const app = express();
 
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use('/', express.static(path.join(__dirname, '/')));
 
 
 
