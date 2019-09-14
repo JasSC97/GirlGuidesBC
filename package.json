@@ -1,0 +1,22 @@
+{
+  "name": "girlguidesbc",
+  "version": "1.0.0",
+  "description": "This is the package.json for the Girl Guides of Canada, West Coast Area branch, website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasSC97/GirlGuidesBC.git"
+  },
+  "author": "jas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasSC97/GirlGuidesBC/issues"
+  },
+  "homepage": "https://github.com/JasSC97/GirlGuidesBC#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
