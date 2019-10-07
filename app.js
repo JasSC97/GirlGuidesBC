@@ -2,9 +2,21 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const url = require('url');
+var keystone = require('keystone');
 
 
 const app = express();
+
+const PORT = process.env.PORT || 8000;
+
+keystone.init({
+    'cookie secret': 'secure string goes here',
+    'name': 'WCA Girl Guides',
+    port: PORT,
+    'user model': 'User',
+    'auto update': true,
+    'auth': true,
+});
 
 
 
@@ -18,7 +30,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-const PORT = process.env.PORT || 8000;
 
-
-app.listen(PORT, () => console.log(`Engines running on port ${PORT}`));
+keystone.set('routes', app);
+keystone.import('models');
+keystone.start();
