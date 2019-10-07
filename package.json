@@ -4,7 +4,7 @@
   "description": "This is the package.json for the Girl Guides of Canada, West Coast Area branch, website.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,5 @@
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "keystone": "^4.2.1"
-  },
-  "scripts": {
-    "start": "node app.js"
   }
 }
