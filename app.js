@@ -1,4 +1,5 @@
 const express = require('express');
+const routes = require('./routes/.');
 const path = require('path');
 const bodyParser = require('body-parser');
 const url = require('url');
@@ -19,16 +20,11 @@ keystone.init({
 });
 
 
-
+app.use('/', routes);
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
-app.use('/', express.static(path.join(__dirname, '/')));
 
 
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 
 keystone.set('routes', app);
