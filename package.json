@@ -18,6 +18,6 @@
   "homepage": "https://github.com/JasSC97/GirlGuidesBC#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
